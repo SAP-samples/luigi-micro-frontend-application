@@ -20,7 +20,7 @@ This project uses `npm`, so you need to have [Node.js](https://nodejs.org/en/) i
 
 The tutorial includes step-by-step instructions on how to create this application from scratch and can be found on [developers.sap.com](https://developers.sap.com).
 
-Alternatively, you may download the application directly by clicking on "Clone or download". Then, navigate to to `react-core-mf` or `react-core-mf` and use these commands to run the app locally:
+Alternatively, you may download the application directly by clicking on "Clone or download". Then, navigate to to `react-core-mf` and use these commands to run the app locally:
 1. ```shell
     npm install
     ```
