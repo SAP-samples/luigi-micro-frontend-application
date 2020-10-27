@@ -1,5 +1,7 @@
 # Luigi Micro Frontend Application Tutorial
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/luigi-micro-frontend-application)](https://api.reuse.software/info/github.com/SAP-samples/luigi-micro-frontend-application)
+
 ## Description
 
 This repository contains the source code of a tutorial on how to create a micro frontend application with [Luigi](https://luigi-project.io). The tutorial shows how to create a simple online shopping application. The main application uses React, while the micro frontend is developed with SAP UI5. Luigi brings the two together and allows you to create a consistent user interface, while also configuring additional features. One such feature is localization for displaying the site in German or English.
