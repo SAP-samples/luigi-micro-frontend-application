@@ -29,7 +29,14 @@ Alternatively, you may download the application directly by clicking on "Clone o
 2. ```shell
     npm start
     ```
-
+In a new terminal window, open the `ui5-mf` which contains the micro frontend for the core app you ran previously. Use these commands to run `ui5-mf`: 
+1. ```shell
+    npm install
+    ```
+2. ```shell
+    npm start
+    ```
+3. Refresh the page of the core app.
 
 ## Known issues
 
