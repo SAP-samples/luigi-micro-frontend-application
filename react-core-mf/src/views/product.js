@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../../node_modules/fundamental-styles/dist/fundamental-styles.css';
-import { ProductCollection } from '../../../ui5-mf/luigi.ui5/uimodule/webapp/model/products.json'
+import { ProductCollection } from '../../../ui5-mf/uimodule/webapp/model/products.json'
 import { Grid, List, StandardListItem } from '@ui5/webcomponents-react';
 import { linkManager } from '@luigi-project/client';
 import '@ui5/webcomponents-icons/dist/AllIcons.js'
@@ -38,7 +38,7 @@ export default class Product extends Component {
 
     return (
       <Grid position="Center" defaultIndent="XL1 L1 M1 S1" defaultSpan="XL10 L10 M10 S10">
-        <List headerText="List with a customizable StandardListItem" onItemClick={handleItemClick}>
+        <List headerText={"Product List with " + ProductCollection.length + " items"} onItemClick={handleItemClick}>
         {listItems}
         </List>
       </Grid>

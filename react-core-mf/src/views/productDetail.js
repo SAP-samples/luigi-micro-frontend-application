@@ -1,6 +1,6 @@
 import React, { Component, useRef } from "react";
 import "../../node_modules/fundamental-styles/dist/fundamental-styles.css";
-import { ProductCollection } from "../../../ui5-mf/luigi.ui5/uimodule/webapp/model/products.json";
+import { ProductCollection } from "../../../ui5-mf/uimodule/webapp/model/products.json";
 import {
   Grid,
   ObjectPage,
