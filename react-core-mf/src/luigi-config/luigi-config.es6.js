@@ -1,5 +1,6 @@
 Luigi.setConfig({
   navigation: {
+    nodeAccessibilityResolver: nodeAccessibilityResolver,
     nodes: () => [
       {
         pathSegment: 'home',
@@ -14,12 +15,19 @@ Luigi.setConfig({
             viewUrl: '/sampleapp.html#/product',
             keepSelectedForChildren: true,
             children: [{
-                pathSegment: ':id',
-                viewUrl: '/sampleapp.html#/productDetail/:id'
+              pathSegment: ':id',
+              viewUrl: '/sampleapp.html#/productDetail/:id'
             }]
           },
+          {
+            pathSegment: 'order',
+            label: 'Order History',
+            icon: 'history',
+            viewUrl: 'http://localhost:8080/index.html'
+          }
         ]
-      }
+      },
+
     ]
   },
   settings: {

@@ -71,7 +71,7 @@ export default function ProductDetail() {
           <DynamicPageHeader>
             <FlexBox alignItems="Center" wrap="Wrap">
               <FlexBox direction="Column" style={{ padding: "10px" }}>
-                <Label>Available quantity {product.stock}</Label>
+                <Label>Available quantity: {product.stock}</Label>
               </FlexBox>
             </FlexBox>
           </DynamicPageHeader>
