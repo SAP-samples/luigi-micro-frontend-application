@@ -4,7 +4,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './views/home.js';
 import Product from './views/product.js';
 import ProductDetail from './views/productDetail';
-import Sample2 from './views/sample2.js';
 import { addInitListener } from '@luigi-project/client';
 import './index.css';
 
@@ -20,7 +19,6 @@ class App extends Component {
       <BrowserRouter basename={`sampleapp.html#`}>
         <Route path="/home" component={Home} />
         <Route path="/product" component={Product} />
-        <Route path="/sample2" component={Sample2} />
         <Route path='/productDetail/:id' component={ProductDetail} />
       </BrowserRouter>
     );

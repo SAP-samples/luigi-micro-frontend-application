@@ -18,26 +18,6 @@ Luigi.setConfig({
                 viewUrl: '/sampleapp.html#/productDetail/:id'
             }]
           },
-          {
-            pathSegment: 'sample2',
-            label: 'Second',
-            icon: 'paper-plane',
-            viewUrl: '/sampleapp.html#/sample2'
-          },
-          {
-            category: { label: 'Links', icon: 'cloud' },
-            label: 'Luigi Project',
-            externalLink: {
-              url: 'https://luigi-project.io/'
-            }
-          },
-          {
-            category: 'Links',
-            label: 'React.js',
-            externalLink: {
-              url: 'https://reactjs.org/'
-            }
-          }
         ]
       }
     ]
