@@ -1,0 +1,21 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "ui5",
+    "namespaceUI5": "luigi",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "ui5libs": "Content delivery network (OpenUI5)",
+    "newdir": true,
+    "namespaceURI": "luigi",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}

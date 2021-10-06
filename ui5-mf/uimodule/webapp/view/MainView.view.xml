@@ -1,0 +1,20 @@
+ <mvc:View controllerName="luigi.ui5.controller.MainView"
+ displayBlock="true"
+ xmlns="sap.m"
+ xmlns:mvc="sap.ui.core.mvc">
+ <List
+   items="{/ProductCollection}">
+   <ObjectListItem
+     title="{name}"
+     type="Active"
+     press="onListItemPress"
+     number="{
+       parts:[{path:'price'},{path:'currencyCode'}],
+       type: 'sap.ui.model.type.Currency',
+       formatOptions: {showMeasure: false}
+     }"
+     numberUnit="{currencyCode}">
+     <ObjectAttribute text="Quantity: {orderQuantity}" />
+   </ObjectListItem>
+ </List>
+</mvc:View>
