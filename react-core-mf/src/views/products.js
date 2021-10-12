@@ -7,29 +7,22 @@ import '@ui5/webcomponents-icons/dist/AllIcons.js'
 
 
 export default class Product extends Component {
+  constructor(props) {
+    super(props);
+    this.toast = React.createRef();
+  }
 
   render() {
-
     const handleItemClick = event => {
-      console.log(event.detail.item.id);
-      linkManager().navigate('/home/product/' + event.detail.item.id.toString());
+      linkManager().withParams({root: "products"})
+      linkManager().navigate('/home/products/' + event.detail.item.id.toString());
     };
 
     const listItems = [];  
     ProductCollection.forEach(product => {
       listItems.push(
-      <StandardListItem 
-        id={product.id}
-        key={product.id}
-        additionalText={product.price + " " + product.currencyCode}
-        additionalTextState="Information"
-        description={product.description}
-        growing="None"
-        headerText={product.orderQuantity}
-        icon={product.icon}
-        type="Active"
-        mode="None"
-        onItemClick={() => handleItemClick(product.id)}>
+      <StandardListItem id={product.id} key={product.id} additionalText={product.price + " " + product.currencyCode} additionalTextState="Information" description={product.description}
+        growing="None" headerText={product.orderQuantity} icon={product.icon} type="Active" mode="None" onItemClick={() => handleItemClick(product.id)}>
           <p onClick={() => handleChildClick(product.id)}>
             {product.name}
           </p>
@@ -38,7 +31,7 @@ export default class Product extends Component {
 
     return (
       <Grid position="Center" defaultIndent="XL1 L1 M1 S1" defaultSpan="XL10 L10 M10 S10">
-        <List headerText={"Product List with " + ProductCollection.length + " items"} onItemClick={handleItemClick}>
+        <List headerText={this.props.localeDict.ITEMS + ": " + ProductCollection.length} onItemClick={handleItemClick}>
         {listItems}
         </List>
       </Grid>

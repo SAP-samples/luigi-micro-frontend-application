@@ -14,7 +14,7 @@
        formatOptions: {showMeasure: false}
      }"
      numberUnit="{currencyCode}">
-     <ObjectAttribute text="Quantity: {orderQuantity}" />
+     <ObjectAttribute text="{i18n>Quantity}: {orderQuantity}" />
    </ObjectListItem>
  </List>
 </mvc:View>

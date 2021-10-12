@@ -63,10 +63,10 @@
                         viewUrl: "/sampleapp.html#/home",
                         children: [
                             {
-                                pathSegment: "product",
+                                pathSegment: "products",
                                 label: "Products",
                                 icon: "product",
-                                viewUrl: "/sampleapp.html#/product",
+                                viewUrl: "/sampleapp.html#/products",
                                 keepSelectedForChildren: true,
                                 children: [{
                                     pathSegment: ':id',
@@ -88,6 +88,33 @@
                 header: { title: "Luigi React App", logo: "/logo192.png" },
                 responsiveNavigation: "simpleMobileOnly",
             },
+            responsiveNavigation: 'simpleMobileOnly',
+            customTranslationImplementation: myTranslationProvider,
+            lifecycleHooks: {
+                luigiAfterInit: () => {
+                    Luigi.i18n().setCurrentLocale(defaultLocale);
+                }
+            },
+            communication: {
+                customMessagesListeners: {
+                    'set-language': (msg) => {
+                        Luigi.i18n().setCurrentLocale(msg.locale);
+                    }
+                }
+            }
         });
     },
 ]);
+
+var defaultLocale = 'en-US';
+function myTranslationProvider() {
+    var dict = {
+        'de-DE': { PRODUCTS: 'Produkte', 'ORDERHISTORY': 'Bestellungen' },
+        'en-US': { PRODUCTS: 'Products', 'ORDERHISTORY': 'Order History' }
+    };
+    return {
+        getTranslation: function (label, interpolation, locale) {
+            return dict[locale || Luigi.i18n().getCurrentLocale() || defaultLocale][label] || label;
+        }
+    }
+};
