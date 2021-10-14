@@ -21,7 +21,6 @@ sap.ui.define(["luigi/ui5/controller/BaseController"], function (Controller) {
             const title = this.getView().getModel("i18n").getResourceBundle().getText("ModalText");
 
             LuigiClient.linkManager().openAsModal('/home/products/' + id, { title: title, size: 'm' });
-            console.log(LuigiClient.linkManager())
         }
     });
 });

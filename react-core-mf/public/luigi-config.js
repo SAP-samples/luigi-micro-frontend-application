@@ -64,7 +64,7 @@
                         children: [
                             {
                                 pathSegment: "products",
-                                label: "Products",
+                                label: 'PRODUCTS',
                                 icon: "product",
                                 viewUrl: "/sampleapp.html#/products",
                                 keepSelectedForChildren: true,
@@ -76,7 +76,7 @@
                             },
                             {
                                 pathSegment: 'order',
-                                label: 'Order History',
+                                label: 'ORDERHISTORY',
                                 icon: 'history',
                                 viewUrl: 'http://localhost:8080/index.html'
                             }
@@ -87,9 +87,8 @@
             settings: {
                 header: { title: "Luigi React App", logo: "/logo192.png" },
                 responsiveNavigation: "simpleMobileOnly",
+                customTranslationImplementation: myTranslationProvider,
             },
-            responsiveNavigation: 'simpleMobileOnly',
-            customTranslationImplementation: myTranslationProvider,
             lifecycleHooks: {
                 luigiAfterInit: () => {
                     Luigi.i18n().setCurrentLocale(defaultLocale);
@@ -109,8 +108,8 @@
 var defaultLocale = 'en-US';
 function myTranslationProvider() {
     var dict = {
-        'de-DE': { PRODUCTS: 'Produkte', 'ORDERHISTORY': 'Bestellungen' },
-        'en-US': { PRODUCTS: 'Products', 'ORDERHISTORY': 'Order History' }
+        'de-DE': { PRODUCTS: 'Produkte', ORDERHISTORY: 'Bestellungen' },
+        'en-US': { PRODUCTS: 'Products', ORDERHISTORY: 'Order History' }
     };
     return {
         getTranslation: function (label, interpolation, locale) {
