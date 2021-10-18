@@ -1,13 +1,18 @@
 {
-  "generator-easy-ui5": {
+  "generator-template-ui5-project": {
     "projectname": "ui5",
-    "namespace": "luigi",
+    "namespaceUI5": "luigi",
     "platform": "Static webserver",
     "viewtype": "XML",
-    "viewname": "Order",
     "ui5libs": "Content delivery network (OpenUI5)",
-    "newdir": false,
+    "newdir": true,
     "namespaceURI": "luigi",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
     "uimodules": [
       "uimodule"
     ],

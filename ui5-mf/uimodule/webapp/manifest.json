@@ -1,11 +1,14 @@
 {
-  "_version": "1.12.0",
+  "_version": "1.21.0",
   "sap.app": {
     "id": "luigi.ui5",
     "type": "application",
+    "i18n": "i18n/i18n.properties",
     "applicationVersion": {
       "version": "1.0.0"
-    }
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}"
   },
   "sap.ui": {
     "technology": "UI5",
@@ -24,8 +27,9 @@
     }
   },
   "sap.ui5": {
+    "flexEnabled": true,
     "rootView": {
-      "viewName": "luigi.ui5.view.Order",
+      "viewName": "luigi.ui5.view.MainView",
       "type": "XML",
       "async": true,
       "id": "idAppControl"
@@ -42,13 +46,6 @@
       "compact": true,
       "cozy": true
     },
-    "resources": {
-      "css": [
-        {
-          "uri": "css/style.css"
-        }
-      ]
-    },
     "models": {
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
@@ -56,6 +53,13 @@
           "bundleName": "luigi.ui5.i18n.i18n"
         }
       }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
     },
     "routing": {
       "config": {
@@ -68,19 +72,17 @@
       },
       "routes": [
         {
-          "name": "RouteOrder",
-          "pattern": "RouteOrder",
-          "target": [
-            "TargetOrder"
-          ]
+          "name": "RouteMainView",
+          "pattern": "RouteMainView",
+          "target": ["TargetMainView"]
         }
       ],
       "targets": {
-        "TargetOrder": {
+        "TargetMainView": {
           "viewType": "XML",
           "viewLevel": 1,
           "viewId": "idAppControl",
-          "viewName": "Order"
+          "viewName": "MainView"
         }
       }
     }

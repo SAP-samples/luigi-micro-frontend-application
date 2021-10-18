@@ -1,4 +1,4 @@
-specVersion: "2.0"
+specVersion: "2.2"
 metadata:
   name: ui5_uimodule
 type: application
@@ -8,7 +8,7 @@ resources:
       webapp: uimodule/webapp
 framework:
   name: OpenUI5
-  version: 1.77.0
+  version: 1.84.0
   libraries:
     - name: sap.ui.core
     - name: sap.m
