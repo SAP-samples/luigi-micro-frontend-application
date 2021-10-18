@@ -20,7 +20,7 @@ export const dict = {
           PRICE: 'Price',
           WELCOME_LUIGI: 'Welcome to Luigi - a micro-frontend framework',
           DESCRIPTION: 'Description',
-          PRODUCTADDED: 'Produkt has been added to cart',
+          PRODUCTADDED: 'Product has been added to cart',
           AVAILABLE: 'Available',
           AVAILABLEQUANT: 'Available quantity: ',
           ADDTOCART: 'Add to cart',
