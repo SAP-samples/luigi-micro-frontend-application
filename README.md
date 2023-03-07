@@ -48,7 +48,7 @@ Create an issue in this repository or contact the Luigi team on our [Slack](http
 
 ## Contributing
 
-To contribute to this project or Luigi itself, first read our [contribution guidelines](https://github.com/SAP/luigi/blob/master/CONTRIBUTING.md).
+To contribute to this project or Luigi itself, first read our [contribution guidelines](https://github.com/SAP/luigi/blob/main/CONTRIBUTING.md).
 
 ## License
 
