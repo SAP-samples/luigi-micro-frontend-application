@@ -1,42 +1,69 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './views/home.js';
-import Products from './views/products.js';
-import ProductDetail from './views/productDetail';
-import { addInitListener, addContextUpdateListener, uxManager } from '@luigi-project/client';
 import { dict } from './language.js';
-import './index.css';
+import Product from './views/products.js';
+import {
+  addInitListener,
+  addContextUpdateListener,
+  removeContextUpdateListener,
+  removeInitListener,
+  uxManager
+} from '@luigi-project/client';
+import ProductDetail from './views/productDetail.js';
+import { ThemeProvider } from "@ui5/webcomponents-react";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { currentLocale: 'en-US' };
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+const App = () => {
+  const [currentLocale, setCurrentLocale] = useState('en-US');
+  const [initListener, setInitListener] = useState(null);
+  const [contextUpdateListener, setContextUpdateListener] = useState(null);
+
+  useEffect(() => {
     const updateCurrentLanguage = () => {
-      this.setState({
-        currentLocale: uxManager().getCurrentLocale()
-      });
-    };
-  
-    addInitListener(() => {
-      console.log('Luigi Client initialized.');
-      updateCurrentLanguage();
-    });
+      setCurrentLocale(uxManager().getCurrentLocale())
+    }
 
-    addContextUpdateListener(() => {
-      updateCurrentLanguage();
-    });
-  }
-  
-  render() {
-    return (
-      <BrowserRouter basename={`sampleapp.html#`}>
-        <Route path="/home" render={(props) => <Home {...props} localeDict={dict[this.state.currentLocale]} currentLocale={this.state.currentLocale} />} />
-        <Route path="/products" render={(props) => <Products {...props} localeDict={dict[this.state.currentLocale]} />} />
-        <Route path='/productDetail/:id' render={(props) => <ProductDetail {...props} localeDict={dict[this.state.currentLocale]} />} />
-      </BrowserRouter>
+    setInitListener(
+      addInitListener(() => {
+        console.log("Luigi Client initialized.");
+        // update current language upon Luigi Client initialization
+        updateCurrentLanguage();
+      })
     );
-  }
-}
 
-render(<App />, document.getElementById('root'));
+    setContextUpdateListener(
+      addContextUpdateListener(() => {
+        // update current language upon Luigi Client context update event
+        updateCurrentLanguage();
+      })
+    );
+
+    return function cleanup() {
+      removeContextUpdateListener(contextUpdateListener);
+      removeInitListener(initListener);
+    };
+  }, []);
+
+  return (
+    <ThemeProvider>
+      <React.StrictMode>
+        <Router basename="microfrontend">
+          <Routes>
+            <Route path="/home" element={<Home localeDict={dict[currentLocale]} currentLocale={currentLocale} />} />
+            <Route path="/products" element={<Product localeDict={dict[currentLocale]} />} />
+            <Route path="/productDetail/:id" element={<ProductDetail localeDict={dict[currentLocale]} />} />
+          </Routes>
+        </Router>
+      </React.StrictMode>
+    </ThemeProvider>
+
+  );
+};
+
+root.render(
+  <App />
+);

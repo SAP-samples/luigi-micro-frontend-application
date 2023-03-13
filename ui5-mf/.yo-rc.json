@@ -1,21 +1,15 @@
 {
-  "generator-template-ui5-project": {
-    "projectname": "ui5",
-    "namespaceUI5": "luigi",
-    "platform": "Static webserver",
-    "viewtype": "XML",
-    "ui5libs": "Content delivery network (OpenUI5)",
-    "newdir": true,
-    "namespaceURI": "luigi",
-    "opa5pos": [
-      "Main"
-    ],
-    "opa5Journeys": [
-      "Main"
-    ],
-    "uimodules": [
-      "uimodule"
-    ],
+  "generator-ui5-app": {
+    "application": "ui5",
+    "namespace": "luigi",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.111.0",
+    "author": "Ndricim Rrapi",
+    "initrepo": false,
+    "tstypes": "@openui5/ts-types-esm",
+    "tstypesVersion": "1.111.0",
+    "appId": "luigi.ui5",
+    "appURI": "luigi/ui5",
     "setupCompleted": true
   }
 }

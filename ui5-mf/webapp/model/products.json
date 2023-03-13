@@ -1,0 +1,104 @@
+{
+    "ProductCollection": [
+        {
+            "id": 101,
+            "name": "Mouse",
+            "price": 45.0,
+            "stock": 80,
+            "icon": "product",
+            "currencyCode": "EUR",
+            "orderQuantity": 2,
+            "description": "Wireless Gaming Mouse with Sensor"
+        },
+        {
+            "id": 102,
+            "name": "Keyboard",
+            "price": 50.0,
+            "stock": 22,
+            "icon": "product",
+            "currencyCode": "EUR",
+            "orderQuantity": 1,
+            "description": "A physical keyboard that uses an individual spring and switch for each key. Today, only premium keyboards are built with key switches."
+        },
+        {
+            "id": 103,
+            "name": "Optical Mouse",
+            "price": 35.0,
+            "stock": 4,
+            "icon": "product",
+            "currencyCode": "EUR",
+            "orderQuantity": 2,
+            "description": "Utilizing the latest optical sensing technology, the USB Optical Scroll Mouse records precise motion."
+        },
+        {
+            "id": 104,
+            "name": "Laptop Pro",
+            "price": 1299.0,
+            "stock": 11,
+            "icon": "laptop",
+            "currencyCode": "EUR",
+            "orderQuantity": 3,
+            "description": "Newest laptop featuring a touch-sensitive OLED display."
+        },
+        {
+            "id": 105,
+            "name": "Mouse 2",
+            "price": 40.0,
+            "stock": 20,
+            "icon": "product",
+            "currencyCode": "EUR",
+            "orderQuantity": 6,
+            "description": "The Mouse 2 is a computer mouse featuring a multi-touch acrylic surface for scrolling. The mouse features a lithium-ion rechargeable battery and Lightning connector for charging and pairing."
+        },
+        {
+            "id": 106,
+            "name": "Printer",
+            "price": 235.0,
+            "stock": 24,
+            "icon": "fx",
+            "currencyCode": "EUR",
+            "orderQuantity": 1,
+            "description": "Affordable printer providing you with the optimal way to take care of all your printing needs."
+        },
+        {
+            "id": 107,
+            "name": "Phone 11",
+            "price": 835.0,
+            "stock": 45,
+            "icon": "iphone",
+            "currencyCode": "EUR",
+            "orderQuantity": 8,
+            "description": "The Phone 11 dimensions are 150.9mm x 75.7mm x 8.3mm (H x W x D). It weighs about 194 grams (6.84 ounces)."
+        },
+        {
+            "id": 108,
+            "name": "Phone 3a",
+            "price": 299.0,
+            "stock": 54,
+            "icon": "desktop-mobile",
+            "currencyCode": "EUR",
+            "orderQuantity": 7,
+            "description": "At 5.6 inches, the display is proportionate to the relatively small body of the phone."
+        },
+        {
+            "id": 109,
+            "name": "Game Console 4",
+            "price": 330.0,
+            "stock": 94,
+            "icon": "video",
+            "currencyCode": "EUR",
+            "orderQuantity": 1,
+            "description": "This is the fourth home video game console compatible with all gaming systems."
+        },
+        {
+            "id": 110,
+            "name": "Monitor",
+            "price": 630.0,
+            "stock": 20,
+            "icon": "sys-monitor",
+            "currencyCode": "EUR",
+            "orderQuantity": 3,
+            "description": "34'' Monitor, Display with stand Height adjustable (115 mm), tiltable (-5° to 21°), rotatable (-30° to 30°) Security slot (cable lock sold separately), anti-theft slot for locking to stand (for display). Includes: DisplayPort cable, HDMI cable, Power cable, Stand, USB 3.0 Type-A to Type-B cable, USB-C cable."
+        }
+    ]
+}

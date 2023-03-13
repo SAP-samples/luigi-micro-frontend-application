@@ -1,0 +1,16 @@
+specVersion: "2.6"
+metadata:
+  name: luigi.ui5
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: dist
+framework:
+  name: OpenUI5
+  version: "1.111.0"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: sap.ui.unified
+    - name: themelib_sap_horizon
