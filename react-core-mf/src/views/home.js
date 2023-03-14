@@ -6,10 +6,8 @@ import { Grid, Panel, Select, Option } from "@ui5/webcomponents-react";
 
 const Home = (props) => {
   const [options] = useState([{ key: 'en-US', text: 'en-US' }, { key: 'de-DE', text: 'de-DE' }]);
-  // const [locale, setLocale] = useState(props.currentLocale);
 
   function onChangeValue(event) {
-    // setLocale(event.detail.selectedOption.innerText);
     sendCustomMessage({
       id: "set-language",
       locale: event.detail.selectedOption.innerText,
